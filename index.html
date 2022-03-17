@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Made Argentina</title>
+    <link rel="shortcut icon" href="imgs/logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/70cc7e71fa.js"></script>
+</head>
+
+<body class="body">
+    <header>
+        <a class="logo" href="#">STEEL MADE</a>
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#sec">STEEL MADE</a></li>
+            <li><a href="#sec-cont">CONTACTO</a></li>
+        </ul>
+    </header>
+    <section>
+        <img class="parallax-img" id="steel1" src="imgs/steel1.png" alt="steel1">
+        <img class="parallax-img" id="steel2" src="imgs/steel2.png" alt="steel2">
+        <img class="parallax-img" id="steel3" src="imgs/steel3.png" alt="steel3">
+        <img id="steelmade_img" src="/imgs/logo.jpg" alt="Steel Made">
+    </section>
+
+    <div class="sec sec-steelmade" id="sec">
+        <div class="div_bg_sec-steelmade">
+        </div>
+        <div class="sec-steelmade_text">
+            <div class="sec-steelmade_text-title">
+                <div class="sec-steelmade_text-words">
+                    <b>Construcción</b>
+                    <b>Steel Framing</b>
+                    <b>Herrería</b>
+                    <b>Mantenimiento Industrial</b>
+                </div>
+            </div>
+            <!-- <h2>Construcción - Steel Frame - Herrería</h2> -->
+            <p>
+                <strong>De lo único que te tenés que ocupar es de disfrutar tu obra, del resto nos encargamos
+                    nosotros!</strong> <br><br>
+                El steel framing es un sistema que utiliza perfiles de acero galvanizado conformados en frío para la
+                construcción de obras de distintos tipos y escalas, desde viviendas pequeñas hasta grandes depósitos. Es
+                un sistema caracterizado por su flexibilidad, durabilidad y eficiencia energética, y desde febrero del
+                2018 se lo considera, en Argentina, un sistema de construcción tradicional
+                <br>
+                Su proceso de construcción es más corto y predecible, reduciendo los costos indirectos relacionados al
+                tiempo de la obra
+                Gracias a los perfiles de acero galvanizados que se utilizan, se optimiza al máximo la relación
+                resistencia/peso, convirtiéndolo en la mejor opción frente a otros materiales para la construcción
+            </p>
+        </div>
+    </div>
+
+    <div class="sec sec-contacto" id="sec-cont">
+        <h2 class="contacto_title">Contactanos</h2>
+        <div class="contacto_container">
+            <div class="caja_contacto">
+                <a class="icons" href="tel:"><i class="fa-solid fa-phone" id="phone_icon"></i></a>
+                <p>+54 9 11 5555-7777</p>
+            </div>
+            <div class="caja_contacto">
+                <a class="icons" href="mailto:steelmadearg@gmail.com"><i class="fa-solid fa-envelope"
+                        id="mail_icon"></i></a>
+                <p>steelmadearg@gmail.com</p>
+            </div>
+            <div class="caja_contacto">
+                <a class="icons" href="https://instagram.com/steelmade_ar"><i class="fa-brands fa-instagram"
+                        id="ig_icon"></i></a>
+                <p>@steelmade_ar</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const steel1 = document.getElementById('steel1')
+        const steel2 = document.getElementById('steel2')
+        const steel3 = document.getElementById('steel3')
+        const steelmade_img = document.getElementById('steelmade_img');
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+            steel1.style.left = value * -1.5 + 'px';
+            steel2.style.left = value * -2 + 'px';
+            steel3.style.left = value * 2 + 'px';
+
+            steel1.style.top = value * 0.5 + 'px';
+            //   steel2.style.top = value * 0 + 'px';
+            steel3.style.top = value * 0.5 + 'px';
+
+            steelmade_img.style.marginTop = value * 1.5 + 'px';
+
+            header.style.top = value * 0.5 + 'px'
+        });
+
+        const phone_icon = document.getElementById('phone_icon');
+        phone_icon.addEventListener('mouseover', () => {
+            phone_icon.classList.add('fa-shake');
+        });
+        phone_icon.addEventListener('mouseout', () => {
+            phone_icon.classList.remove('fa-shake');
+        });
+
+        const mail_icon = document.getElementById('mail_icon');
+        mail_icon.addEventListener('mouseover', () => {
+            mail_icon.classList.add('fa-shake');
+        });
+        mail_icon.addEventListener('mouseout', () => {
+            mail_icon.classList.remove('fa-shake');
+        });
+
+        const ig_icon = document.getElementById('ig_icon');
+        ig_icon.addEventListener('mouseover', () => {
+            ig_icon.classList.add('fa-shake');
+        });
+        ig_icon.addEventListener('mouseout', () => {
+            ig_icon.classList.remove('fa-shake');
+        });
+
+    </script>
+
+
+</body>
+
+</html>
