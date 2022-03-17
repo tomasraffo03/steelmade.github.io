@@ -38,7 +38,7 @@ header .logo {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 4vw;
     letter-spacing: 2px;
 }
 
@@ -55,7 +55,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 2vw;
     padding: 6px 15px;
     color: #fff;
     border-radius: 20px;
@@ -120,7 +120,7 @@ section #steelmade_img {
 
 .div_bg_sec-steelmade {
     width: 50%;
-    background-image: url('bg_sec1.jpg');
+    background-image: url('/imgs/bg_sec1.jpg');
     /* background-position: center; */
     background-size:cover;
     background-repeat: no-repeat;
@@ -227,6 +227,20 @@ section #steelmade_img {
  
 
 @media all and (max-width: 600px) {
+    header .logo {
+        font-weight: 700;
+        font-size: 5vw;
+        width: 20%;
+    }
+
+    header ul li {
+        margin: 0;
+    }
+
+    header ul li a {
+        font-size: 3vw;
+    }
+    
     .sec p {
         font-size: 2vw;
     }
@@ -257,6 +271,17 @@ section #steelmade_img {
 }
 
 @media all and (max-width: 415px) {
+    header ul li {
+        flex-grow: 1;
+    }
+    
+    header ul li a {
+        font-size: 3.5vw;
+        flex-grow: 1;
+        text-align: center;
+        padding: 3px 7px;
+    }
+    
     .sec p {
         font-size: 3vw;
     }
